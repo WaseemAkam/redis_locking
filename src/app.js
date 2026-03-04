@@ -5,5 +5,7 @@ const app = express();
 app.use(express.json());
 
 app.use('/api', bookingRoutes);
-
+app.get("/", (req, res) => {
+  res.send("Redis Locking Ticket Booking API Running 🚀");
+});
 export default app;
